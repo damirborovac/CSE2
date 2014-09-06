@@ -13,7 +13,7 @@ public class WelcomeClass {
      System.out.println("  | WELCOME |"); // required to be 
      System.out.println("  -----------"); // outputted by the 
      System.out.println("  ^  ^  ^  ^  ^  ^"); // program. 
-     System.out.println(" / \\/ \\/ \\/ \\/ \\/ \\ ");
+     System.out.println(" / \\/ \\/ \\/ \\/ \\/ \\ "); 
      System.out.println("|-D--A--B--3--1--5-|");
      System.out.println(" \\ /\\ /\\ /\\ /\\ /\\ / ");
      System.out.println("  v  v  v  v  v  v");
