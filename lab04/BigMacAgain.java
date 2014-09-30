@@ -22,39 +22,34 @@ public class BigMacAgain { // defining main method
 
        
     System.out.print("Please enter the number of Big Macs you wish to purchase (integer > 0): "); // User input.
-       int nBigMacs = 0;
-
+    int nBigMacs = 0;
+  
     if(myScanner.hasNextInt()){
        nBigMacs = myScanner.nextInt();
-       answerWrong = myScanner.next();
        
-       if((nBigMacs <=0) && (!answerWrong.equals.next()));{ {
+       if( nBigMacs <= 0 || (!nBigMacs.hasNextInt()) ){
        System.out.println("The value you entered is not an integer > 0."); // If input different from 0, display error message.
                return;
-              
-        else{
-            System.out.println("You ordered " +nBigMacs+" Big Macs for a cost of "+nBigMacs+ "x2.22 = " +(nBigMacs*2.22)+ " $.");//display cost of big macs
-            if(nBigMacs > 0){
-                System.out.print(" Do you want an order of fries (Y/y/N/n)?:"); // does the user want fries?
-                String answer = myScanner.next();
-       
-            if(answer.equalsIgnoreCase("Y")){          // if yes, add $2.15 to the meal cost.
-                 System.out.println("You ordered fries at a cost of $2.15");
-                 System.out.println("The total cost of the meal is:" + ((nBigMacs*2.22)+2.15)+ "$");
-       }    
-            else if(answer.equalsIgnoreCase("N")){ // if not, just compute cost without the fries. 
-                 System.out.println("The total cost of the meal is:" +(nBigMacs*2.22)+"$");
-               
-            }
-            else if((!answer.equalsIgnoreCase("Y"))||(!answer.equalsIgnoreCase("N"))){ // display error message
-                 System.out.println("Sorry,You did not enter one of 'y', 'Y', 'N', 'n'"); // if fries input different from Y/y or N/n.
-                         
-                     return;
-            }
-                }
-               }
-            }
-          }
        }
-    }
-}    
+        else{
+            System.out.println("You ordered " +nBigMacs+" Big Macs for a cost of "+nBigMacs+ "x2.22 = $" +(nBigMacs*2.22)+ ".");//display cost of big macs
+        }
+            System.out.print(" Do you want an order of fries (Y/y/N/n)?:"); // does the user want fries?
+            String answer = myScanner.next();
+            char fries = answer.charAt(0);
+            
+            switch(fries){
+                case 'y': case 'Y':
+                    System.out.println(" You ordered fries at a cost of $2.15.");
+                    System.out.println("The total cost of the meal is" +((nBigMacs*2.22)+2.15));
+                    break;
+                case 'n': case 'N':
+                    System.out.println("The total cost of the meal is: " +(nBigMacs*2.22));
+                    break;
+                default:
+                    System.out.println("You did not enter y/Y nor n/N.");
+                    break;
+            }
+         }
+  }
+}
