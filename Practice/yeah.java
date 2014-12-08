@@ -1,30 +1,23 @@
-import java.util.Scanner;
+ 
+ 
+ public class yeah{
+ 	public static void main(String [] args){
+ 		
+ 		
+ 		String [] SA = {"hello" , "goodbye"  , "jack" , "bye" , "yes" , "no" , "yoo"};
 
-public class yeah{
-	public static void main(String [] args){
-	    
-	   Scanner input = new Scanner(System.in);
-	   while(!input.hasNextInt()){
-	       input.next();
-	       System.out.println("That is not an integer.");
-	     System.out.println("Enter an integer: ");
-	      int number1 = input.getInt();
-	    System.out.println("Enter an integer: ");
-	      int number2 = input.getInt();  
-	     
-	   }
-        int num1 = n1;
-        int num2 = n2;
-        System.out.println("Number 1 is " +num1+ "and number 2 is : " +num2);
-	  }
-	public static int getInt(int n1, int n2, int n3){
-	    System.out.println("Please enter an integer: ");
-	    int n1 = input.nextInt();
-	    System.out.println("Please enter an integer: ");
-	    int n2 = input.nextInt();
-	    System.out.println("Please enter an integer: ");
-	    int n3= input.nextInt();
-	    
-	    return getInt;
-	}
-}
+ 		   		System.out.println(small(SA));
+ 	}
+ 		public static String small(String [] input){
+ 		 int minLength = input[0].length();
+ 		 int index = 0;
+
+ 		 for(int i = 1; i<input.length; i++){
+ 		   if(input[i].length()>minLength){
+ 		     index = i;
+ 		     minLength = input[i].length();
+ 		   }
+ 		 }
+ 		 return input[index];
+ 		}
+ 	}
